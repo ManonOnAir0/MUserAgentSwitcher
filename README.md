@@ -19,7 +19,11 @@ Comme l'extension n'est pas encore sur les stores officiels, voici comment l'ins
 
 1. **Téléchargez** ou clonez ce dépôt sur votre ordinateur.
 2. Ouvrez votre navigateur (Chrome, Brave, Edge, Opera, etc.).
-3. Accédez à la page des extensions : `chrome://extensions/`.
+3. Accédez à la page des extensions selon votre navigateur :
+   - **Chrome** : `chrome://extensions/`
+   - **Brave** : `brave://extensions/`
+   - **Edge** : `edge://extensions/`
+   - **Opera** : `opera://extensions/`
 4. Activez le **Mode développeur** (souvent un interrupteur en haut à droite).
 5. Cliquez sur **Charger l'extension décompressée** ou **Charger l'extension non empaquetée**.
 6. Sélectionnez le dossier contenant les fichiers de l'extension.
