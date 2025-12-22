@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "MUserAgentSwitcher",
+  "description": "L'extension de ManonOnAir pour naviguer sans limites. Corrige les bugs sur Twitch et simule Chrome en un clic.",
+  "version": "1.0.0",
+  "author": "ManonOnAir",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://player.twitch.tv/*",
+    "*://*.twitch.tv/*",
+    "*://gql.twitch.tv/*",
+    "*://*.twitchcdn.net/*",
+    "*://*.ttvnw.net/*",
+    "<all_urls>"
+  ],
+  "icons": {
+    "16": "logom.png",
+    "48": "logom.png",
+    "128": "logom.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "logom.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
