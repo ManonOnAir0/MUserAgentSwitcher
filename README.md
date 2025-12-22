@@ -29,6 +29,12 @@ Comme l'extension n'est pas encore sur les stores officiels, voici comment l'ins
 2. Choisissez le profil de navigateur que vous souhaitez simuler.
 3. Profitez d'une navigation sans accroc.
 
+## 🔒 Sécurité & Éthique
+
+- **100% Local** : L'extension fonctionne entièrement sur votre ordinateur. Aucune donnée de navigation n'est collectée, transmise ou vendue. Votre vie privée reste privée.
+- **Fonction native** : Le changement de User-Agent est une fonctionnalité native de tous les navigateurs modernes. Nous avons simplement créé une interface pour l'activer plus facilement, sans avoir à fouiller dans les menus techniques.
+- **Responsabilité** : L'outil respecte les règles des sites web. En l'utilisant, vous vous engagez également à respecter les conditions d'utilisation des plateformes que vous visitez.
+
 ---
 
 ## ⚖️ Conditions d'utilisation & Licence
