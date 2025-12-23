@@ -28,5 +28,12 @@
   },
   "background": {
     "service_worker": "background.js"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.streamrunners.fr/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
 }
