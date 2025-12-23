@@ -13,7 +13,7 @@ Marre des restrictions arbitraires ou des bugs étranges sur certaines plateform
 
 ## 🛠️ Installation
 
-Vous pouvez directement **[télécharger la dernière version ici](https://github.com/ManonOnAir0/MUserAgentSwitcher/releases/tag/Production)**.
+Vous pouvez directement **[télécharger la dernière version ici](https://github.com/ManonOnAir0/MUserAgentSwitcher/releases/)**.
 
 Comme l'extension n'est pas encore sur les stores officiels, voici comment l'installer manuellement en quelques secondes :
 
