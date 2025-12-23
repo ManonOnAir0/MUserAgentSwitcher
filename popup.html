@@ -320,9 +320,69 @@
       from { transform: translateY(20px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
     }
+
+    #onboarding-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--bg);
+      z-index: 1000;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .onboarding-screen {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 400px;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .onboarding-screen.active {
+      display: flex;
+    }
+
+    .onboarding-icon {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 24px;
+    }
   </style>
 </head>
 <body>
+  <div id="onboarding-overlay">
+    <div id="onboarding-step-1" class="onboarding-screen active">
+      <img src="logom.png" alt="Logo" class="onboarding-icon">
+      <h2 style="font-size: 24px; margin-bottom: 12px;">Bienvenue !</h2>
+      <p style="color: var(--text-muted); margin-bottom: 32px; line-height: 1.6;">
+        Merci d'avoir installé MUserAgentSwitcher. Prêt à naviguer sans limites ?
+      </p>
+      <button id="onboarding-next" class="btn btn-primary">Suivant</button>
+    </div>
+
+    <div id="onboarding-step-2" class="onboarding-screen">
+      <div class="onboarding-icon" style="color: var(--primary);">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <h2 style="font-size: 24px; margin-bottom: 12px;">Pack Twitch x Streamrunners</h2>
+      <p style="color: var(--text-muted); margin-bottom: 32px; line-height: 1.6;">
+        Voulez-vous activer le pack recommandé pour corriger les bugs sur Twitch et Streamrunners ?
+      </p>
+      <div style="display: flex; gap: 12px; width: 100%;">
+        <button id="onboarding-apply-pack" class="btn btn-primary" style="flex: 1;">Appliquer</button>
+        <button id="onboarding-skip-pack" class="btn btn-secondary" style="flex: 1;">Passer</button>
+      </div>
+    </div>
+  </div>
+
   <div class="header">
     <div class="top-bar">
       <div class="brand">

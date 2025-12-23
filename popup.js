@@ -227,3 +227,54 @@ document.getElementById('reset-ua').addEventListener('click', () => {
     showNotification('Paramètres réinitialisés');
   });
 });
+function initOnboarding() {
+  const overlay = document.getElementById('onboarding-overlay');
+  const step1 = document.getElementById('onboarding-step-1');
+  const step2 = document.getElementById('onboarding-step-2');
+  const nextBtn = document.getElementById('onboarding-next');
+  const applyBtn = document.getElementById('onboarding-apply-pack');
+  const skipBtn = document.getElementById('onboarding-skip-pack');
+
+  chrome.storage.sync.get(['onboardingCompleted'], (result) => {
+    if (!result.onboardingCompleted) {
+      overlay.style.display = 'flex';
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    step1.classList.remove('active');
+    step2.classList.add('active');
+  });
+
+  const finishOnboarding = () => {
+    chrome.storage.sync.set({ onboardingCompleted: true }, () => {
+      overlay.style.opacity = '0';
+      overlay.style.transition = 'opacity 0.3s ease';
+      setTimeout(() => {
+        overlay.style.display = 'none';
+      }, 300);
+    });
+  };
+
+  applyBtn.addEventListener('click', () => {
+    chrome.storage.sync.get(['sites'], (result) => {
+      let sites = result.sites || [];
+      ['twitch.tv', 'streamrunners.fr'].forEach(domain => {
+        if (!sites.includes(domain)) {
+          sites.push(domain);
+        }
+      });
+      chrome.storage.sync.set({ sites }, () => {
+        displaySites();
+        showNotification('Pack Twitch X Streamrunners activé !');
+        finishOnboarding();
+      });
+    });
+  });
+
+  skipBtn.addEventListener('click', () => {
+    finishOnboarding();
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initOnboarding);
