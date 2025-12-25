@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "MUserAgentSwitcher",
-  "description": "MUserAgentSwitcher est une extension conçue pour ajuster l’User-Agent du navigateur afin d’améliorer la compatibilité de certains sites web.",
+  "description": "MUserAgentSwitcher est une extension conçue pour ajuster l’User-Agent du navigateur.",
   "version": "1.0.0",
   "author": "ManonOnAir",
   "permissions": [
