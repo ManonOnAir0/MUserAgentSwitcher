@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "MUserAgentSwitcher",
-  "description": "L'extension de ManonOnAir pour naviguer sans limites. Corrige les bugs sur Twitch et simule Chrome en un clic.",
+  "description": "MUserAgentSwitcher est une extension conçue pour ajuster l’User-Agent du navigateur afin d’améliorer la compatibilité de certains sites web.",
   "version": "1.0.0",
   "author": "ManonOnAir",
   "permissions": [
