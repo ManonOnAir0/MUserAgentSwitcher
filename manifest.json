@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "minimum_chrome_version": "145",
+  "name": "MUserAgentSwitcher",
+  "description": "Ajustez l'agent utilisateur de votre navigateur sur les sites de votre choix, pour limiter les blocages et les bugs.",
+  "version": "1.2.0",
+  "author": "ManonOnAir",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "storage"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "icons": {
+    "16": "assets/logo.png",
+    "48": "assets/logo.png",
+    "128": "assets/logo.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "assets/logo.png"
+  },
+  "background": {
+    "service_worker": "modules/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.streamrunners.fr/*"],
+      "js": ["modules/content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

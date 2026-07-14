@@ -1,0 +1,155 @@
+{
+  "language": {
+    "selector_aria": "Choose interface language",
+    "option": {
+      "fr": "French",
+      "en": "English"
+    }
+  },
+  "brand": {
+    "subtitle": "by ManonOnAir"
+  },
+  "common": {
+    "continue": "Continue",
+    "version_label": "Version {version}"
+  },
+  "nav": {
+    "home": "Home",
+    "presets": "Presets",
+    "settings": "Settings",
+    "community": "Community",
+    "help": "Help",
+    "about": "About"
+  },
+  "dashboard": {
+    "title": "Targeted sites",
+    "subtitle": "Choose which sites should receive the modified browser identity.",
+    "add_site_button": "Add current site",
+    "active_list": "Active list",
+    "empty": "No site yet.<br>Open the target tab, then click “Add current site”.",
+    "remove_site_title": "Remove this site from the list"
+  },
+  "presets": {
+    "title": "Presets",
+    "pack": {
+      "title": "Twitch and Streamrunners pack",
+      "description": "Preset for <strong>Twitch</strong> and <strong>Streamrunners</strong>, especially useful in Brave. Enable it only if you use at least one of these two sites.",
+      "note": "<i class=\"fa-solid fa-gauge-high card-note-icon\" aria-hidden=\"true\"></i>This setting mainly helps fix Twitch embeds (integrated streams) that can stay black or fail to load.",
+      "enable_button": "Enable Twitch / Streamrunners pack",
+      "disable_button": "Disable Twitch / Streamrunners pack",
+      "row_label": "Twitch and Streamrunners pack",
+      "row_remove_title": "Remove Twitch and Streamrunners pack"
+    }
+  },
+  "settings": {
+    "title": "Advanced settings",
+    "subtitle": "User-Agent and Client Hints headers: for users comfortable with technical settings.",
+    "headers_title": "HTTP headers",
+    "headers_description": "Customize the browser identity sent to websites.",
+    "fields": {
+      "ua": "User-Agent",
+      "ch_ua": "Sec-CH-UA",
+      "platform": "Platform",
+      "mobile": "Mobile flag (?0 or ?1)"
+    },
+    "save": "Save",
+    "reset": "Reset",
+    "warning": "<strong>Warning:</strong> invalid values may break behavior on some websites."
+  },
+  "community": {
+    "title": "Community and support",
+    "subtitle": "Talk with other users or support project development.",
+    "discord": {
+      "title": "Discord",
+      "description": "Questions, bug reports, or just want to chat? Join the official Discord server.",
+      "button": "Open Discord"
+    },
+    "patreon": {
+      "title": "Support the project",
+      "description": "If this extension helps you, you can support ManonOnAir's work on Patreon.",
+      "button": "View Patreon page"
+    }
+  },
+  "tutorial": {
+    "title": "How does it work?",
+    "subtitle": "Three quick points to get started.",
+    "step1": {
+      "title": "What is it for?",
+      "text": "Some websites are stricter depending on the browser (Twitch is a good example). The extension sends a Chrome-like identity to selected pages, which can remove blocks or rendering issues."
+    },
+    "step2": {
+      "title": "Twitch and Streamrunners pack",
+      "text": "This is optional: if you see issues on these sites (black screen, loading stuck), open <strong>Presets</strong> and enable the pack. You can also do it when opening the extension for the first time. On Streamrunners, the extension signals pack activation only when you open their site, to avoid unnecessary background work."
+    },
+    "step3": {
+      "title": "Add a site to the list",
+      "text": "Go to the target website, open the extension, then click <strong>“Add current site”</strong>. Refresh the page (F5 or equivalent) so the change is applied."
+    }
+  },
+  "about": {
+    "title": "MUserAgentSwitcher",
+    "card1": {
+      "title": "What is this project?",
+      "text": "My name is <strong>ManonOnAir</strong>. I built this extension so users are not penalized for their browser choice. It stays simple, free, and ad-free."
+    },
+    "card2": {
+      "title": "Is privacy handled seriously?",
+      "text": "<strong>Yes.</strong> Settings and site list stay on your device. I collect no personal data through the extension and I cannot access your browsing activity."
+    },
+    "footer": "Made with ❤️ by ManonOnAir"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Choose your language",
+      "text": "You can change the language now or later from the interface."
+    },
+    "step2": {
+      "title": "Your data",
+      "text": "Your site list and settings are stored locally in the browser (extension storage). Nothing is sent to our servers: we do not see your visits or what you do online."
+    },
+    "step3": {
+      "title": "ManonOnAir",
+      "text": "This project is open source and built with ❤️ by ManonOnAir. You can support me on Patreon or access the source code on GitHub."
+    },
+    "step4": {
+      "title": "Twitch / Streamrunners pack",
+      "text": "This pack helps reduce bugs on <strong>Twitch</strong> (player, black screen) and <strong>Streamrunners</strong>, especially with Brave.",
+      "text_extra": "It is <strong>optional</strong>: enable it only if needed. You can change it later in Presets. For Streamrunners, this setting is applied only when you open the site.",
+      "enable": "Enable",
+      "skip": "Skip"
+    },
+    "step5": {
+      "title": "Welcome to MUserAgentSwitcher",
+      "finish": "Close",
+      "pack_enabled": "The Twitch / Streamrunners pack is enabled. You can disable or edit it in Presets.",
+      "pack_skipped": "No pack for now: it remains available in Presets if you need it later.",
+      "joke": "Enjoy browsing! On the web, pressing F5 is still the fastest “turn it off and on again”. Simple, but still effective. Your data does not travel around the world - it stays on your computer."
+    }
+  },
+  "footer": {
+    "copyright": "© {year} ManonOnAir. All rights reserved.",
+    "website": "Website",
+    "project_page": "Project page"
+  },
+  "notify": {
+    "load_sites_failed": "Unable to load the site list.",
+    "site_update_failed": "Unable to update the list.",
+    "site_removed": "Site removed from the list.",
+    "pack_disabled": "Twitch and Streamrunners pack disabled.",
+    "pack_enabled": "Twitch and Streamrunners pack enabled.",
+    "pack_already_enabled": "This pack is already enabled.",
+    "pack_toggle_failed": "Unable to change pack status.",
+    "pack_enable_failed": "Unable to enable the pack.",
+    "active_tab_unavailable": "Unable to access the active tab.",
+    "internal_page_blocked": "Internal browser pages cannot be added.",
+    "invalid_page_address": "Invalid page address.",
+    "site_already_exists": "This site is already in the list.",
+    "site_added": "Site added to the list.",
+    "save_site_failed": "Unable to save this site.",
+    "ua_saved": "Changes saved.",
+    "ua_save_failed": "Unable to save changes.",
+    "ua_reset": "Default values restored.",
+    "ua_reset_failed": "Unable to reset values.",
+    "language_change_failed": "Unable to change language."
+  }
+}

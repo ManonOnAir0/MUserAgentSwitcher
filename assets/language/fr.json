@@ -1,0 +1,155 @@
+{
+  "language": {
+    "selector_aria": "Choisir la langue de l'interface",
+    "option": {
+      "fr": "Français",
+      "en": "Anglais"
+    }
+  },
+  "brand": {
+    "subtitle": "par ManonOnAir"
+  },
+  "common": {
+    "continue": "Continuer",
+    "version_label": "Version {version}"
+  },
+  "nav": {
+    "home": "Accueil",
+    "presets": "Préréglages",
+    "settings": "Paramètres",
+    "community": "Communauté",
+    "help": "Aide",
+    "about": "À propos"
+  },
+  "dashboard": {
+    "title": "Sites concernés",
+    "subtitle": "Choisissez sur quels sites l'extension modifie l'identité du navigateur.",
+    "add_site_button": "Ajouter le site ouvert",
+    "active_list": "Liste active",
+    "empty": "Aucun site pour l'instant.<br>Ouvrez l'onglet voulu, puis cliquez sur « Ajouter le site ouvert ».",
+    "remove_site_title": "Retirer ce site de la liste"
+  },
+  "presets": {
+    "title": "Préréglages",
+    "pack": {
+      "title": "Pack Twitch et Streamrunners",
+      "description": "Préréglage pour <strong>Twitch</strong> et <strong>Streamrunners</strong>, particulièrement utile sous Brave. À n'activer que si vous utilisez au moins l'un de ces deux sites.",
+      "note": "<i class=\"fa-solid fa-gauge-high card-note-icon\" aria-hidden=\"true\"></i>Ce réglage aide surtout à corriger les embeds Twitch (les streams intégrés) qui peuvent rester en écran noir ou ne pas charger.",
+      "enable_button": "Activer le pack Twitch / Streamrunners",
+      "disable_button": "Désactiver le pack Twitch / Streamrunners",
+      "row_label": "Pack Twitch et Streamrunners",
+      "row_remove_title": "Retirer le pack Twitch et Streamrunners"
+    }
+  },
+  "settings": {
+    "title": "Réglages avancés",
+    "subtitle": "User-Agent et en-têtes Client Hints : réservé aux utilisateurs à l'aise avec la technique.",
+    "headers_title": "En-têtes HTTP",
+    "headers_description": "Personnalisez ce que les sites reçoivent comme identité de navigateur.",
+    "fields": {
+      "ua": "User-Agent",
+      "ch_ua": "Sec-CH-UA",
+      "platform": "Plateforme",
+      "mobile": "Indicateur mobile (?0 ou ?1)"
+    },
+    "save": "Enregistrer",
+    "reset": "Réinitialiser",
+    "warning": "<strong>Attention :</strong> des valeurs incorrectes peuvent empêcher certains sites de fonctionner correctement."
+  },
+  "community": {
+    "title": "Communauté et soutien",
+    "subtitle": "Échangez avec d'autres utilisateurs ou soutenez le développement du projet.",
+    "discord": {
+      "title": "Discord",
+      "description": "Une question, un bug à signaler ou simplement envie de discuter ? Rejoignez le serveur Discord officiel.",
+      "button": "Ouvrir Discord"
+    },
+    "patreon": {
+      "title": "Soutenir le projet",
+      "description": "Si cette extension vous est utile, vous pouvez aider ManonOnAir à poursuivre le développement via Patreon.",
+      "button": "Voir la page Patreon"
+    }
+  },
+  "tutorial": {
+    "title": "Comment ça marche ?",
+    "subtitle": "Trois repères pour bien démarrer.",
+    "step1": {
+      "title": "À quoi ça sert ?",
+      "text": "Certains sites se montrent plus stricts selon le navigateur (Twitch en est un bon exemple). L'extension indique une identité de type Chrome aux pages que vous avez choisies, ce qui peut lever des blocages ou des bugs d'affichage."
+    },
+    "step2": {
+      "title": "Pack Twitch et Streamrunners",
+      "text": "C'est facultatif : si vous rencontrez des soucis sur ces sites (écran noir, chargement qui reste bloqué), ouvrez <strong>Préréglages</strong> et activez le pack. Vous pouvez aussi le faire lors de la première ouverture de l'extension. Côté Streamrunners, l'extension ne signale l'activation du pack que lorsque vous ouvrez leur site, afin d'éviter tout travail inutile en arrière-plan."
+    },
+    "step3": {
+      "title": "Ajouter un site à la liste",
+      "text": "Rendez-vous sur le site concerné, ouvrez l'extension, puis cliquez sur <strong>« Ajouter le site ouvert »</strong>. Pensez à actualiser la page (F5 ou équivalent) pour que le changement soit pris en compte."
+    }
+  },
+  "about": {
+    "title": "MUserAgentSwitcher",
+    "card1": {
+      "title": "Qu'est-ce que ce projet ?",
+      "text": "Je m'appelle <strong>ManonOnAir</strong>. J'ai développé cette extension pour qu'on ne soit pas pénalisé selon le navigateur qu'on préfère. Elle reste simple, gratuite et sans publicité."
+    },
+    "card2": {
+      "title": "Est-ce sérieux côté confidentialité ?",
+      "text": "<strong>Oui.</strong> Les réglages et la liste des sites restent sur votre appareil. Je ne récupère aucune donnée personnelle via l'extension et je n'ai pas accès à vos visites."
+    },
+    "footer": "Fait avec ❤️ par ManonOnAir"
+  },
+  "onboarding": {
+    "step1": {
+      "title": "Choisissez votre langue",
+      "text": "Vous pouvez changer la langue maintenant ou plus tard depuis l'interface."
+    },
+    "step2": {
+      "title": "Vos données",
+      "text": "La liste des sites et vos réglages sont enregistrés localement dans le navigateur (stockage de l'extension). Rien n'est envoyé vers nos serveurs : nous ne voyons pas vos visites ni ce que vous faites en ligne."
+    },
+    "step3": {
+      "title": "ManonOnAir",
+      "text": "Le projet est open source et développé avec ❤️ par ManonOnAir. Vous pouvez me soutenir sur Patreon ou accéder au code source sur GitHub."
+    },
+    "step4": {
+      "title": "Pack Twitch / Streamrunners",
+      "text": "Ce pack sert à limiter les bugs sur <strong>Twitch</strong> (lecteur, écran noir) et sur <strong>Streamrunners</strong>, en particulier sous Brave.",
+      "text_extra": "Il est <strong>facultatif</strong> : activez-le seulement si vous en avez besoin. Vous pourrez le modifier plus tard dans Préréglages. Côté Streamrunners, le réglage n'est pris en compte que lorsque vous ouvrez le site.",
+      "enable": "Activer",
+      "skip": "Passer"
+    },
+    "step5": {
+      "title": "Bienvenue sur MUserAgentSwitcher",
+      "finish": "Fermer",
+      "pack_enabled": "Le pack Twitch / Streamrunners est activé. Vous pouvez le couper ou le modifier dans Préréglages.",
+      "pack_skipped": "Pas de pack pour l'instant : il reste dans Préréglages si vous en avez besoin plus tard.",
+      "joke": "Bon surf ! Sur le Web, le F5, c'est un peu le « on éteint et on rallume » en plus rapide : bête, mais ça marche encore. Vos données ne font pas le tour du monde - elles restent sur votre ordinateur."
+    }
+  },
+  "footer": {
+    "copyright": "© {year} ManonOnAir. Tous droits réservés.",
+    "website": "Site web",
+    "project_page": "Page du projet"
+  },
+  "notify": {
+    "load_sites_failed": "Impossible de charger la liste des sites.",
+    "site_update_failed": "Impossible de mettre à jour la liste.",
+    "site_removed": "Site retiré de la liste.",
+    "pack_disabled": "Pack Twitch et Streamrunners désactivé.",
+    "pack_enabled": "Pack Twitch et Streamrunners activé.",
+    "pack_already_enabled": "Ce pack est déjà activé.",
+    "pack_toggle_failed": "Impossible de modifier le pack.",
+    "pack_enable_failed": "Impossible d'activer le pack.",
+    "active_tab_unavailable": "Impossible d'accéder à l'onglet actif.",
+    "internal_page_blocked": "Les pages internes du navigateur ne peuvent pas être ajoutées.",
+    "invalid_page_address": "Adresse de la page non valide.",
+    "site_already_exists": "Ce site figure déjà dans la liste.",
+    "site_added": "Site ajouté à la liste.",
+    "save_site_failed": "Impossible d'enregistrer le site.",
+    "ua_saved": "Modifications enregistrées.",
+    "ua_save_failed": "Impossible d'enregistrer les modifications.",
+    "ua_reset": "Valeurs par défaut rétablies.",
+    "ua_reset_failed": "Impossible de réinitialiser.",
+    "language_change_failed": "Impossible de changer la langue."
+  }
+}

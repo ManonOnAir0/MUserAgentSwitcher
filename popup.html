@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="onboarding-overlay">
+    <div class="onboarding-main">
+      <div class="onboarding-chrome">
+        <p class="onboarding-kicker" id="onboarding-kicker"></p>
+        <div class="onboarding-dots" id="onboarding-dots" role="presentation" aria-hidden="true">
+          <span class="onboarding-dot" data-i="1"></span>
+          <span class="onboarding-dot" data-i="2"></span>
+          <span class="onboarding-dot" data-i="3"></span>
+          <span class="onboarding-dot" data-i="4"></span>
+          <span class="onboarding-dot" data-i="5"></span>
+        </div>
+      </div>
+      <div id="onboarding-step-1" class="onboarding-screen active">
+        <div class="onboarding-panel">
+          <img src="assets/logo.png" alt="MUserAgentSwitcher" class="onboarding-icon onboarding-icon--sm">
+          <h2 class="onboarding-title">Choisissez votre langue</h2>
+          <p class="onboarding-text">Vous pouvez changer la langue maintenant ou plus tard depuis l'interface.</p>
+          <div class="onboarding-language-row">
+            <div class="language-select-wrap">
+              <select id="onboarding-language-select" class="language-select" aria-label="Choisir la langue de l'interface">
+                <option value="fr">Français</option>
+                <option value="en">Anglais</option>
+              </select>
+              <i class="fa-solid fa-chevron-down language-select-caret" aria-hidden="true"></i>
+            </div>
+          </div>
+          <button type="button" id="onboarding-next" class="btn btn-primary">Continuer</button>
+        </div>
+      </div>
+
+      <div id="onboarding-step-2" class="onboarding-screen">
+        <div class="onboarding-panel">
+          <img src="assets/logo.png" alt="MUserAgentSwitcher" class="onboarding-icon onboarding-icon--sm">
+          <h2 class="onboarding-title">Vos données</h2>
+          <p class="onboarding-text">
+            La liste des sites et vos réglages sont enregistrés localement dans le navigateur (stockage de l'extension). Rien n'est envoyé vers nos serveurs : nous ne voyons pas vos visites ni ce que vous faites en ligne.
+          </p>
+          <button type="button" id="onboarding-next-2" class="btn btn-primary">Continuer</button>
+        </div>
+      </div>
+
+      <div id="onboarding-step-3" class="onboarding-screen">
+        <div class="onboarding-panel">
+          <img src="assets/logo.png" alt="MUserAgentSwitcher" class="onboarding-icon onboarding-icon--sm">
+          <h2 class="onboarding-title">ManonOnAir</h2>
+          <p class="onboarding-text">
+            Le projet est open source et développé avec ❤️ par ManonOnAir. Vous pouvez me soutenir sur Patreon ou accéder au code source sur GitHub.
+          </p>
+          <div class="onboarding-pack-actions onboarding-support-actions">
+            <a href="https://github.com/ManonOnAir0/MUserAgentSwitcher" target="_blank" rel="noopener noreferrer" class="btn btn-secondary onboarding-support-link">
+              <i class="fa-brands fa-github btn-inline-icon" aria-hidden="true"></i>
+              GitHub
+            </a>
+            <a href="https://www.patreon.com/c/ManonOnAir" target="_blank" rel="noopener noreferrer" class="btn btn-patreon onboarding-support-link">
+              <i class="fa-brands fa-patreon btn-inline-icon" aria-hidden="true"></i>
+              Patreon
+            </a>
+          </div>
+          <button type="button" id="onboarding-next-3" class="btn btn-primary">Continuer</button>
+        </div>
+      </div>
+
+      <div id="onboarding-step-4" class="onboarding-screen">
+        <div class="onboarding-panel">
+          <img src="assets/logo.png" alt="MUserAgentSwitcher" class="onboarding-icon onboarding-icon--sm">
+          <h2 class="onboarding-title">Pack Twitch / Streamrunners</h2>
+          <p class="onboarding-text">
+            Ce pack sert à limiter les bugs sur <strong>Twitch</strong> (lecteur, écran noir) et sur <strong>Streamrunners</strong>, en particulier sous Brave.
+          </p>
+          <p class="onboarding-text onboarding-text--tight">
+            Il est <strong>facultatif</strong> : activez-le seulement si vous en avez besoin. Vous pourrez le modifier plus tard dans Préréglages. Côté Streamrunners, le réglage n'est pris en compte que lorsque vous ouvrez le site.
+          </p>
+          <div class="onboarding-pack-actions">
+            <button type="button" id="onboarding-apply-pack" class="btn btn-primary">Activer</button>
+            <button type="button" id="onboarding-skip-pack" class="btn btn-secondary">Passer</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="onboarding-step-5" class="onboarding-screen">
+        <div id="onboarding-step-5-panel" class="onboarding-panel">
+          <img src="assets/logo.png" alt="MUserAgentSwitcher" class="onboarding-icon onboarding-icon--sm">
+          <h2 class="onboarding-title">Bienvenue sur MUserAgentSwitcher</h2>
+          <p id="onboarding-step-5-pack-line" class="onboarding-pack-recap"></p>
+          <p id="onboarding-step-5-joke" class="onboarding-text onboarding-joke"></p>
+          <button type="button" id="onboarding-finish" class="btn btn-primary">Fermer</button>
+        </div>
+      </div>
+    </div>
+    <p class="onboarding-bar-copy" id="onboarding-bar-copy"></p>
+  </div>
+
+  <div class="header">
+    <div class="top-bar">
+      <div class="brand">
+        <div class="brand-icon">
+          <img src="assets/logo.png" alt="Logo">
+        </div>
+        <div class="brand-text">
+          <h1>MUserAgentSwitcher</h1>
+          <span>par ManonOnAir</span>
+        </div>
+      </div>
+      <div class="version-badge" id="version-badge" hidden></div>
+    </div>
+    <div class="nav-tabs-wrap">
+      <div class="nav-tabs">
+        <button type="button" class="tab-btn active" data-tab="dashboard">
+          <i class="fa-solid fa-house tab-btn-icon" aria-hidden="true"></i>
+          <span class="tab-btn-label">Accueil</span>
+        </button>
+        <button type="button" class="tab-btn" data-tab="presets">
+          <i class="fa-solid fa-sliders tab-btn-icon" aria-hidden="true"></i>
+          <span class="tab-btn-label">Préréglages</span>
+        </button>
+        <button type="button" class="tab-btn" data-tab="settings">
+          <i class="fa-solid fa-gear tab-btn-icon" aria-hidden="true"></i>
+          <span class="tab-btn-label">Paramètres</span>
+        </button>
+        <button type="button" class="tab-btn" data-tab="community">
+          <i class="fa-solid fa-users tab-btn-icon" aria-hidden="true"></i>
+          <span class="tab-btn-label">Communauté</span>
+        </button>
+        <button type="button" class="tab-btn" data-tab="tutorial">
+          <i class="fa-solid fa-circle-question tab-btn-icon" aria-hidden="true"></i>
+          <span class="tab-btn-label">Aide</span>
+        </button>
+        <button type="button" class="tab-btn" data-tab="about">
+          <i class="fa-solid fa-circle-info tab-btn-icon" aria-hidden="true"></i>
+          <span class="tab-btn-label">À propos</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div id="dashboard" class="tab-content active">
+      <div class="toolbar">
+        <div class="page-head toolbar-head">
+          <h2 class="page-title">Sites concernés</h2>
+          <p class="page-subtitle">Choisissez sur quels sites l'extension modifie l'identité du navigateur.</p>
+        </div>
+        <button type="button" id="add-site" class="btn btn-primary btn--inline">
+          <i class="fa-solid fa-plus btn-inline-icon" aria-hidden="true"></i>
+          Ajouter le site ouvert
+        </button>
+      </div>
+
+      <div class="section-label">Liste active</div>
+      <ul id="site-list" class="site-list"></ul>
+      <div id="empty-msg" class="empty-state" style="display: none;">
+        Aucun site pour l'instant.<br>
+        Ouvrez l'onglet voulu, puis cliquez sur « Ajouter le site ouvert ».
+      </div>
+    </div>
+
+    <div id="presets" class="tab-content">
+      <div class="page-head">
+        <h2 class="page-title">Préréglages</h2>
+      </div>
+
+      <div class="card">
+        <h3>
+          <i class="fa-solid fa-puzzle-piece heading-icon" aria-hidden="true"></i>
+          Pack Twitch et Streamrunners
+        </h3>
+        <p>
+          Préréglage pour <strong>Twitch</strong> et <strong>Streamrunners</strong>, particulièrement utile sous Brave. À n'activer que si vous utilisez au moins l'un de ces deux sites.
+        </p>
+        <p class="card-note">
+          <i class="fa-solid fa-gauge-high card-note-icon" aria-hidden="true"></i>
+          Ce réglage aide surtout à corriger les embeds Twitch (les streams intégrés) qui peuvent rester en écran noir ou ne pas charger.
+        </p>
+        <button type="button" id="btn-config-twitch" class="btn btn-primary">
+          <i class="fa-solid fa-bolt btn-inline-icon" aria-hidden="true"></i>
+          Activer le pack
+        </button>
+      </div>
+    </div>
+
+    <div id="settings" class="tab-content">
+      <div class="page-head">
+        <h2 class="page-title">Réglages avancés</h2>
+        <p class="page-subtitle">User-Agent et en-têtes Client Hints : réservé aux utilisateurs à l'aise avec la technique.</p>
+      </div>
+
+      <div class="card">
+        <h3>En-têtes HTTP</h3>
+        <p>Personnalisez ce que les sites reçoivent comme identité de navigateur.</p>
+
+        <div class="field">
+          <label class="field-label" for="ua-input">User-Agent</label>
+          <textarea id="ua-input" class="textarea-control" spellcheck="false"></textarea>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="ch-ua-input">Sec-CH-UA</label>
+          <input id="ch-ua-input" class="input-control" type="text" spellcheck="false">
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label class="field-label" for="ch-platform-input">Plateforme</label>
+            <input id="ch-platform-input" class="input-control" type="text" spellcheck="false">
+          </div>
+          <div class="field">
+            <label class="field-label" for="ch-mobile-input">Indicateur mobile (?0 ou ?1)</label>
+            <input id="ch-mobile-input" class="input-control" type="text" spellcheck="false">
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" id="save-ua" class="btn btn-primary">Enregistrer</button>
+          <button type="button" id="reset-ua" class="btn btn-secondary">Réinitialiser</button>
+        </div>
+      </div>
+
+      <div class="form-hint">
+        <p><strong>Attention :</strong> des valeurs incorrectes peuvent empêcher certains sites de fonctionner correctement.</p>
+      </div>
+    </div>
+
+    <div id="community" class="tab-content">
+      <div class="page-head">
+        <h2 class="page-title">Communauté et soutien</h2>
+        <p class="page-subtitle">Échangez avec d'autres utilisateurs ou soutenez le développement du projet.</p>
+      </div>
+
+      <div class="card card--discord">
+        <h3>
+          <i class="fa-brands fa-discord heading-icon" aria-hidden="true"></i>
+          Discord
+        </h3>
+        <p>Une question, un bug à signaler ou simplement envie de discuter ? Rejoignez le serveur Discord officiel.</p>
+        <a href="https://discord.gg/J7r62HzQza" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-discord">
+          <i class="fa-brands fa-discord btn-inline-icon" aria-hidden="true"></i>
+          Ouvrir Discord
+        </a>
+      </div>
+
+      <div class="card card--patreon">
+        <h3>
+          <i class="fa-brands fa-patreon heading-icon" aria-hidden="true"></i>
+          Soutenir le projet
+        </h3>
+        <p>Si cette extension vous est utile, vous pouvez aider ManonOnAir à poursuivre le développement via Patreon.</p>
+        <a href="https://www.patreon.com/c/ManonOnAir" target="_blank" rel="noopener noreferrer" class="btn btn-patreon">
+          <i class="fa-brands fa-patreon btn-inline-icon" aria-hidden="true"></i>
+          Voir la page Patreon
+        </a>
+      </div>
+    </div>
+
+    <div id="tutorial" class="tab-content">
+      <div class="page-head page-head--centered">
+        <h2 class="page-title">Comment ça marche ?</h2>
+        <p class="page-subtitle">Trois repères pour bien démarrer.</p>
+      </div>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>À quoi ça sert ?</h4>
+          <p>Certains sites se montrent plus stricts selon le navigateur (Twitch en est un bon exemple). L'extension indique une identité de type Chrome aux pages que vous avez choisies, ce qui peut lever des blocages ou des bugs d'affichage.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Pack Twitch et Streamrunners</h4>
+          <p>C'est facultatif : si vous rencontrez des soucis sur ces sites (écran noir, chargement qui reste bloqué), ouvrez <strong>Préréglages</strong> et activez le pack. Vous pouvez aussi le faire lors de la première ouverture de l'extension. Côté Streamrunners, l'extension ne signale l'activation du pack que lorsque vous ouvrez leur site, afin d'éviter tout travail inutile en arrière-plan.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Ajouter un site à la liste</h4>
+          <p>Rendez-vous sur le site concerné, ouvrez l'extension, puis cliquez sur <strong>« Ajouter le site ouvert »</strong>. Pensez à actualiser la page (F5 ou équivalent) pour que le changement soit pris en compte.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="about" class="tab-content">
+      <div class="about-hero">
+        <img src="assets/logo.png" alt="Logo" class="about-logo">
+        <h2 class="page-title">MUserAgentSwitcher</h2>
+        <p class="about-version" id="about-version" hidden></p>
+      </div>
+
+      <div class="card">
+        <h3>Qu'est-ce que ce projet ?</h3>
+        <p>
+          Je m'appelle <strong>ManonOnAir</strong>. J'ai développé cette extension pour qu'on ne soit pas pénalisé selon le navigateur qu'on préfère. Elle reste simple, gratuite et sans publicité.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Est-ce sérieux côté confidentialité ?</h3>
+        <p>
+          <strong>Oui.</strong> Les réglages et la liste des sites restent sur votre appareil. Je ne récupère aucune donnée personnelle via l'extension et je n'ai pas accès à vos visites.
+        </p>
+      </div>
+
+      <div class="about-footer">
+        <p>Fait avec ❤️ par ManonOnAir</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-bottom-stack">
+    <div id="notification-area" class="notification-area"></div>
+    <footer class="app-footer">
+      <p class="app-footer-copy" id="app-footer-copy"></p>
+      <div class="app-footer-links">
+        <a
+          id="footer-link-website"
+          class="app-footer-link"
+          href="https://manononair.fr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Site web
+        </a>
+        <span class="app-footer-separator" aria-hidden="true">•</span>
+        <a
+          id="footer-link-project"
+          class="app-footer-link"
+          href="https://git.manononair.fr/manononair/MUserAgentSwitcher"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Page du projet
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/popup.js"></script>
+</body>
+</html>
